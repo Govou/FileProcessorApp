@@ -1,0 +1,33 @@
+ <form [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+    <div class="flatLeftdiv">
+      <br>
+      <div > 
+<!--        
+        <div class="container">
+          <label>
+            <input class="check inputbtn" type="checkbox"  type="file" id="customFile" name="myfile"
+            (change)="onFileSelect($event)" #UploadFileInput>
+            <div class="btn">
+              <span class="me">download</span>
+              <span class="mo">Hang on a moment, download in progress</span>
+            </div>
+          </label>
+        </div> -->
+       
+        <input class="upload-button" type="file" id="customFile" name="myfile"
+      (change)="onFileSelect($event)" #UploadFileInput>
+
+      <button class="process-button" id="Request" >&nbsp;&nbsp; Process Request </button> 
+      <!-- <input class="inputbtn" type="file" id="customFile" name="myfile"
+      (change)="onFileSelect($event)" #UploadFileInput> -->
+      <!-- <label for="customFile">{{fileInputLabel || 'Choose File'}}</label> -->
+       </div>
+      
+       
+      
+    </div>
+  </form>
+
+  <!-- <form [formGroup]="fileUploadForm" (ngSubmit)="onFormSubmit()">
+  
+  </form> -->

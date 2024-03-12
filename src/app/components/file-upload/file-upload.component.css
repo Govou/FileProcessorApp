@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300); 
+
+body{
+	font-family: 'Nunito', sans-serif;
+	background-color: #060e33;
+}
+
+.container{
+	position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+	.check{
+		display:none;
+	}
+	.btn{
+		text-transform: uppercase;
+		color: green;
+		border: 2px solid green;
+		display: inline-block;
+		padding: 15px;
+		padding-right: 50px;
+		padding-left: 50px;
+		border-radius: 3px;
+		cursor: pointer;
+		overflow: hidden;
+		box-sizing: border-box;
+		font-size:14px;
+		transition: all .3s ease;
+		.mo{
+			position:relative;
+			overflow:hidden;
+			bottom: -150px;
+			width:0px;
+			height:0px;
+			text-align:center;
+			display: inline-block;
+		   opacity:0;
+			color: #272727;
+		}
+		&:before{
+			width:0%;
+			position: absolute;
+			left:0;
+			bottom:3px;
+			height: 5px;
+			background-color: greenyellow;
+			content: "";		
+		}
+		&:after{
+			width:100%;
+			height:0%;
+			position:absolute;
+			bottom:3px;
+			left:0;
+			background-color: green;
+			content: "Download complete";
+			overflow:hidden;
+			text-align:center;
+			line-height: 4rem;
+		}
+		
+		&:hover{
+			background-color: green;
+			color: #fff;
+		}
+	}
+	input[type=checkbox]:checked ~ .btn{
+			background: #ddced9;
+			border-radius: 0px;
+			border: none;
+			padding-top: 1.2rem;
+			padding-bottom: 1.2rem;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+			
+			&:before{
+				width:100%;
+				content: "";
+				color: #fff;
+				text-align: center;
+				line-height: 70px;
+				transition: all 3.5s linear;
+			}
+			&:after{
+				height:calc(100% - 3px);
+				color: #060e33;
+				transition: all .3s ease-in-out;
+				transition-delay: 3.5s;
+			}
+			.me{
+				display:none;
+			}
+			.mo{
+				transition:bottom .4s ease, opacity 1s ease;
+				transition-delay:.3s;
+				height: auto;
+				width:auto;
+				bottom: 0px;
+				opacity: 1;
+			}
+		}
+}
+
+
+.process-button{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 3rem;
+  }
+
+  .upload-button{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 211, 91) 0%, rgb(4, 146, 28) 100%);
+    color: white;
+    padding-block: 12px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+
+  .process-button:hover, .upload-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+  }
