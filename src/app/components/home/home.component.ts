@@ -36,12 +36,12 @@ export class HomeComponent implements OnInit {
   }
 
   resetForm(){
-    this.myInputVariable.nativeElement.value = '';
+    this.uploadService.producedOutcome$.subscribe((value) => {
+      this.item = new ProcessedOutput();
+      console.log(value);
+    });
   }
 
 
-reset() {
-    this.myInputVariable.nativeElement.value = '';
-}
 
 }

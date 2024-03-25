@@ -38,9 +38,6 @@ export class FileUploadComponent implements OnInit {
       if (!_.includes(af, file.type)) {
         this.fileUploadForm.get('myfile')!.reset();//   .setValue(null) ;
         this.fileInputLabel = "Not allowed";
-        this.fileUploadForm = this.formBuilder.group({
-          myfile: ['']
-        });
         alert('Only EXCEL Docs Allowed!');
        
 
