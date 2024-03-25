@@ -36,9 +36,13 @@ export class FileUploadComponent implements OnInit {
       const file = event.target.files[0];
       // console.log(file);
       if (!_.includes(af, file.type)) {
-        alert('Only EXCEL Docs Allowed!');
-        this.fileUploadForm.get('myfile')!.setValue(null);
+        this.fileUploadForm.get('myfile')!.reset();//   .setValue(null) ;
         this.fileInputLabel = "Not allowed";
+        this.fileUploadForm = this.formBuilder.group({
+          myfile: ['']
+        });
+        alert('Only EXCEL Docs Allowed!');
+       
 
         //return false;
       } else {
